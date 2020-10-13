@@ -115,7 +115,7 @@ class Plugin
      */
     public function get_latest_wordpress_version_avaible(): string
     {   
-        $response   = wp_remote_get($this->get_wp_api());
+        $response = wp_remote_get($this->get_wp_api());
 
         if (200 == $response['response']['code']) 
         {

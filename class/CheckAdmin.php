@@ -49,8 +49,8 @@ class CheckAdmin
         <h1>Check plugin</h1>
         <form method="post" action="options.php">';
     
-            settings_fields( 'check_plugin_settings' ); 
-            do_settings_sections( 'check-plugin-slug' ); 
+            settings_fields('check_plugin_settings'); 
+            do_settings_sections('check-plugin-slug'); 
             submit_button();
     
         echo '</form>
@@ -113,7 +113,7 @@ class CheckAdmin
     public function check_plugin_api_url_field_html(): void
     {
  
-        $text = get_option( 'check_plugin_api_url' );
+        $text = get_option('check_plugin_api_url');
      
         printf(
             '<input type="text" id="check_plugin_api_url" name="check_plugin_api_url" value="%s" required />',
@@ -129,7 +129,7 @@ class CheckAdmin
      */
     public function check_plugin_flag_field_html(): void
     {
-        $checked = (get_option( 'check_plugin_flag' ) == 1) ? 'checked' : '';
+        $checked = (get_option('check_plugin_flag') == 1) ? 'checked' : '';
      
         echo '<input type="checkbox" id="check_plugin_flag" name="check_plugin_flag" value="1" '. $checked .' />';
     }

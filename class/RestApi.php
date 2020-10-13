@@ -46,7 +46,7 @@ class RestApi
      */
     public function registerRestRoute(): void
     {
-        register_rest_route( 'check-plugin/v1/', $this->api_url, [
+        register_rest_route('check-plugin/v1/', $this->api_url, [
             'methods'   => self::REST_METHOD,
             'callback'  => [$this, 'rest_route_content'],
         ]);
